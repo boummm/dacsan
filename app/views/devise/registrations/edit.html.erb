@@ -37,7 +37,7 @@
              <h3><strong> 名前:<%= f.text_field :name, class: "form-control "  %></h3>
 
               <h3> <strong> メール:<%= f.email_field :email, class: "form-control" %></h3>
-             <h3>  <strong> 役割: </strong><%= @user.role == 1 ? "ユーザー" : "管理者" %></h3>
+             <h3>  <strong> 役割: </strong><%= @user.role == 1 ? "ユーザー" : "Admin" %></h3>
              </div>
              <br>
              <%= f.submit "編集", class: "btn btn-primary" %>

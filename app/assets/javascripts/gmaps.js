@@ -1,4 +1,4 @@
-var map;
+/*var map;
 var jsonObj = [];
 
 function initMap() {
@@ -36,7 +36,7 @@ function geocodeAddress(geocoder, address, plant_des, plant_id) {
       });
       infowindow.open(map, marker);
     } else {
-      alert('Geocode was not successful for the following reason: ' + status);
+      //alert('Geocode was not successful for the following reason: ' + status);
     }
   });
 }
@@ -76,4 +76,4 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function(aut
     });
   });
 };
-
+*/

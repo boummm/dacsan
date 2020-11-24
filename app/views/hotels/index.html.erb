@@ -5,18 +5,10 @@
                 <h2>設備やサービス</h2>
                 <%= form_tag 'hotels', method: :get do %>
                     <div class="list-group">
-                        <p class="list-group-item">
-                            <%= check_box_tag 'wifi' %>無料Wi-Fi
-                        </p>
-                        <p class="list-group-item">
-                            <%= check_box_tag 'breakfast' %>朝食込み
-                        </p>
-                        <p class="list-group-item">
-                            <%= check_box_tag 'pool' %>プール
-                        </p>
-                        <p class="list-group-item">
-                            <%= check_box_tag 'parking' %>無料駐車場
-                        </p>
+                        <select name=hotel[:address], class="form-control">
+                            <option value="Ha Noi">Ha Noi</option>
+                            <option value="Hai Duong">Hai Duong</option>
+                        </select>
                     </div>
                     <h2>旅行者の評価</h2>
                     <div class="list-group">
@@ -47,7 +39,7 @@
         <% @hotels.each do |hotel| %>
             <div class="row well hotel">
                 <div class="col-md-7 abt-left">
-                    <%= image_tag hotel.hotel_pictures.first.picture.url, alt: hotel.name, class:"img-bn" %>
+                    <%= link_to image_tag("food/#{rand(10)}.jpg", alt: "hotel.name",  class:"img-bn")%>
                 </div>
                 <div class="col-sm-5 hotel-information">
                     <h4><%= link_to hotel.name, hotel_path(hotel.id) %></h4>
@@ -90,7 +82,7 @@
             <% @hotels2.each do |hotel| %>
                 <div class="row well hotel">
                     <div class="col-md-7 abt-left">
-                        <%= image_tag hotel.hotel_pictures.first.picture.url, alt: hotel.name, class:"img-bn" %>
+                    <%= link_to image_tag("h1.jpg", alt: "hotel.name",  class:"img-bn")%>
                     </div>
                     <div class="col-sm-5 hotel-information">
                         <h4><%= link_to hotel.name, hotel_path(hotel.id) %></h4>
